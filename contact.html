@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title id="dynamic-title">Loading...</title> <!-- Title will be set dynamically -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom_css.css" rel="stylesheet">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Define page titles based on URLs
+      const pageTitles = {
+        "index.html": "Home | Brainiq College of Accounts",
+        "about.html": "About Us | Brainiq College of Accounts",
+        "courses.html": "Courses | Brainiq College of Accounts",
+        "trainers.htmlhtmlhtml": "Our Trainers | Brainiq College of Accounts",
+        "events.htmlhtml": "Events | Brainiq College of Accounts",
+        "contact.html": "Contact Us | Brainiq College of Accounts"
+      };
+
+      // Get the current page URL
+      let currentPage = window.location.pathname.split("/").pop() || "index.html"; // Defaults to index.html
+
+      // Update the title dynamically
+      document.title = pageTitles[currentPage] || "Brainiq College of Accounts";
+
+      // Set Active Link
+      let menuLinks = document.querySelectorAll(".navmenu a");
+      menuLinks.forEach(link => {
+        let pageName = link.getAttribute("href").split("/").pop();
+        
+        // Remove active class from all
+        link.classList.remove("active");
+
+        // Add active class if the link matches the current page
+        if (pageName === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo1.png" alt="" style="height: 150px; width: 150px;">BRAINIQ</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">ATD</a></li>
+              <li><a href="course-details.html">CPA</a></li>
+              <li><a href="course-details.html">CAMS</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Short Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Computer Applications</a></li>
+                  <li><a href="#">Accounting Packages</a></li>
+                  <li><a href="#">Web Design</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="courses.html">Get Started</a>
+
+    </div>
+  </header>
+
+</body>
+
+</html>
+<main class="main">
+  <div class="page-title" data-aos="fade">
+    <div class="heading">
+      <div class="container">
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1>Contact</h1>
+            <p>Contact us for more details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.php">Home</a></li>
+          <li class="current">Contact</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="info-item d-flex">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Nyeri Teachers Plaza</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Nyeri+Teachers+Plaza" target="_blank" class="btn btn-primary btn-sm mt-2">View on Google Maps</a>
+            </div>
+          </div>
+          <div class="info-item d-flex">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+254706400570 | 0780259884 | 0786631783</p>
+            </div>
+          </div>
+          <div class="info-item d-flex">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>brainiqcollege@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <form action="forms/contact.php" method="post" class="php-email-form">
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <button type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

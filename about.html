@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title id="dynamic-title">Loading...</title> <!-- Title will be set dynamically -->
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom_css.css" rel="stylesheet">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Define page titles based on URLs
+      const pageTitles = {
+        "index.html": "Home | Brainiq College of Accounts",
+        "about.html": "About Us | Brainiq College of Accounts",
+        "courses.html": "Courses | Brainiq College of Accounts",
+        "trainers.html": "Our Trainers | Brainiq College of Accounts",
+        "events.html": "Events | Brainiq College of Accounts",
+        "contact.html": "Contact Us | Brainiq College of Accounts"
+      };
+
+      // Get the current page URL
+      let currentPage = window.location.pathname.split("/").pop() || "index.html"; // Defaults to index.html
+
+      // Update the title dynamically
+      document.title = pageTitles[currentPage] || "Brainiq College of Accounts";
+
+      // Set Active Link
+      let menuLinks = document.querySelectorAll(".navmenu a");
+      menuLinks.forEach(link => {
+        let pageName = link.getAttribute("href").split("/").pop();
+        
+        // Remove active class from all
+        link.classList.remove("active");
+
+        // Add active class if the link matches the current page
+        if (pageName === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo1.png" alt="" style="height: 150px; width: 150px;">BRAINIQ</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="course-details.html">ATD</a></li>
+              <li><a href="course-details.html">CPA</a></li>
+              <li><a href="course-details.html">CAMS</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Short Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Computer Applications</a></li>
+                  <li><a href="#">Accounting Packages</a></li>
+                  <li><a href="#">Web Design</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="courses.html">Get Started</a>
+
+    </div>
+  </header>
+
+</body>
+
+</html>
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+                <h1>About Us<br></h1>
+                <p class="mb-0">
+                  At our college, we bridge creativity and precision through expert-led programs in Web Design              and Accounting. Our web design courses empower students with cutting-edge skills in UI/UX,              coding, and digital creativity, preparing them for dynamic careers in the tech industry.            Meanwhile, our accounting programs provide a strong foundation in financial management,             auditing, and business analytics, equipping students with the expertise needed for success in           the corporate world. Whether you’re designing the future of the web or managing financial growth, we help you build a career with confidence.
+                </p>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.php">Home</a></li>
+            <li class="current">About Us<br></li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- About Us Section -->
+    <section id="about" class="about section">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/about-2.jpg" class="img-fluid" alt="Accounting and Web Development">
+      </div>
+
+      <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+        <h3>Empower Your Future with Accounting & Web Development</h3>
+        <p class="fst-italic">
+          Whether you're passionate about numbers or coding, our programs provide the skills you need 
+          to excel in **finance** and **technology**. 
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> <span><strong>Accounting:</strong> Master financial reporting, taxation, and auditing to drive business success.</span></li>
+          <li><i class="bi bi-check-circle"></i> <span><strong>Web Development:</strong> Learn to build responsive, user-friendly websites using modern technologies like HTML, CSS, JavaScript, and frameworks.</span></li>
+          <li><i class="bi bi-check-circle"></i> <span>Get hands-on experience with real-world projects and expert mentorship to prepare for high-demand careers.</span></li>
+        </ul>
+        <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /About Section -->
+
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Events</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="2" class="purecounter"></span>
+              <p>Trainers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-3">What Our Students Say</h2>
+    <p class="text-muted">Hear from our graduates and students about their experiences.</p>
+  </div>
+
+  <div class="container">
+    <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 (Web Design) -->
+        <div class="carousel-item active">
+          <div class="testimonial-item text-center text-dark p-5" style="border-radius: 10px; background: url('assets/img/banner-bg.png') center/cover no-repeat;">
+            <div class="mb-2">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img rounded-circle" alt="Student Image">
+            </div>
+            <h4>Emily Johnson</h4>
+            <p class="text-success fw-bold text-decoration-underline" style="font-size: 24px;">Web Design Graduate</p>
+            <p class="testimonial-text">
+              "The web design course provided me with real-world skills in UI/UX and coding. Now, I'm working as a professional front-end developer!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 (Accounting) -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center text-dark p-5" style="border-radius: 10px; background: url('assets/img/banner-bg.png') center/cover no-repeat;">
+            <div class="mb-2">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img rounded-circle" alt="Student Image">
+            </div>
+            <h4>Michael Smith</h4>
+            <p class="text-success fw-bold text-decoration-underline" style="font-size: 24px;">Accounting Student</p>
+            <p class="testimonial-text">
+              "The accounting program gave me hands-on experience with financial analysis and auditing, helping me land an internship at a top firm!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 (Web Development) -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center text-dark p-5" style="border-radius: 10px; background: url('assets/img/banner-bg.png') center/cover no-repeat;">
+            <div class="mb-2">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img rounded-circle" alt="Student Image">
+            </div>
+            <h4>Sophia Williams</h4>
+            <p class="text-success fw-bold text-decoration-underline" style="font-size: 24px;">Web Development Student</p>
+            <p class="testimonial-text">
+              "I learned to build responsive websites and gained confidence in JavaScript. This course truly transformed my career prospects!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 (Finance) -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center text-dark p-5" style="border-radius: 10px; background: url('assets/img/banner-bg.png') center/cover no-repeat;">
+            <div class="mb-2">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img rounded-circle" alt="Student Image">
+            </div>
+            <h4>Daniel Brown</h4>
+            <p class="text-success fw-bold text-decoration-underline" style="font-size: 24px;">Finance Graduate</p>
+            <p class="testimonial-text">
+              "The accounting course was detailed and practical, covering everything from financial modeling to taxation. Highly recommended!"
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS (Required for Carousel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript to Ensure Auto-Sliding -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let myCarousel = new bootstrap.Carousel(document.querySelector("#testimonialCarousel"), {
+      interval: 5000,
+      ride: "carousel",
+      pause: false,
+      wrap: true
+    });
+  });
+</script>
+
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.php" class="logo d-flex align-items-center">
+            <span class="sitename">BCA</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Nyeri Teachers Plaza</p>
+            <p>Nyeri, 10100</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254706400570 | 0780259884 | 0786631783</span></p>
+            <p><strong>Email:</strong> <span><a href="mailto:brainiqcollege@gmail.com">brainiqcollege@gmail.com</a></span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Accounting courses</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2025</span> <strong class="px-1 sitename">BCA</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed & maintained by <a href="mailto:jonathanmuthini2@gmail.com">Brainiq College ICT department</a>  
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
